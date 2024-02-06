@@ -22,3 +22,13 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+#yes-btn {
+    background-color: green;
+    color: white;
+}
+
+#no-btn {
+    background-color: red;
+    color: white;
+}
