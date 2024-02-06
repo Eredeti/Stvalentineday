@@ -6,7 +6,7 @@ const gif = document.getElementById('gif');
 const bouton1 = document.getElementById('bouton1');
 const bouton2 = document.getElementById('bouton2');
 
-titre.innerHTML = "Veux-tu être mon date le 14 février ?";
+document.queryselector('h1').textContent = "Coucou";
 gif.src = "premier.gif";
 
 if changement == 1{
