@@ -24,7 +24,7 @@
     <h1 id="titre">Titre</h1>
 
     <!-- Gif modifiable depuis la bibliothèque -->
-    <img id="gif" src="lien_vers_ton_gif" alt="Gif">
+    <img id="gif" src="premier.gif" alt="Gif">
 
     <!-- Deux boutons cliquables -->
     <button id="bouton1">Bouton 1</button>
@@ -41,12 +41,13 @@
         // Ajout d'écouteurs d'événements aux boutons
         bouton1.addEventListener('click', function() {
             // Actions à effectuer pour le bouton 1
-            titre.innerHTML = "Nouveau Titre pour Bouton 1";
+            gif.src = "deuxieme.gif";
+            titre.innerHTML = "YOUPIIIII !";
         });
 
         bouton2.addEventListener('click', function() {
             // Actions à effectuer pour le bouton 2
-            gif.src = "nouveau_lien_vers_ton_gif";
+
         });
     </script>
 </body>
