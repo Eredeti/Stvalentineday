@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
     const responseDiv = document.getElementById('response');
-    const firstGif = document.getElementById('first-gif');
+    const firstGifContainer = document.getElementById('first-gif-container');
     const secondGif = document.getElementById('second-gif');
 
     yesBtn.addEventListener('click', function() {
         responseDiv.textContent = 'Youpi!';
         responseDiv.style.fontSize = '24px';
         responseDiv.style.color = 'green';
-        firstGif.style.display = 'none'; // Cacher le premier GIF
+        firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
         secondGif.setAttribute('src', 'deuxième.gif'); // Afficher le deuxième GIF
+        document.querySelector('h1').style.display = 'none'; // Cacher la phrase "Veux-tu être mon valentin ?"
     });
 
     let noBtnClicks = 0;
