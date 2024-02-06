@@ -6,10 +6,10 @@ const gif = document.getElementById('gif');
 const bouton1 = document.getElementById('bouton1');
 const bouton2 = document.getElementById('bouton2');
 
-document.queryselector('h1').textContent = "Coucou";
+document.querySelector('h1').textContent = "Coucou";
 gif.src = "premier.gif";
 
-if changement == 1{
+if changement === 1{
     titre.innerHTML = "YOUPIIIIII !";
     gif.src = "deuxième.gif";
     bouton1.style.display = "none";
