@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         noBtnClicks++;
 
-        yesBtn.style.fontSize = `${parseInt(yesBtn.style.fontSize || 16) + 1}px`;
+        yesBtn.style.fontSize = `${parseInt(yesBtn.style.fontSize || 16) + 5}px`;
 
         // Réinitialiser le deuxième GIF
         secondGif.setAttribute('src', '');
