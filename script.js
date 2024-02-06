@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     yesBtn.addEventListener('click', function() {
         firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
-        secondGif.style.display = 'block'; // Afficher le deuxième GIF
-        secondGif.setAttribute('src', 'deuxième.gif'); // Afficher le deuxième GIF
+        first-gif.srcContent('src', 'deuxième.gif'); // Afficher le deuxième GIF
         valentinText.textContent = "YOUPIIIIIIIIIII"; // Nouveau texte
         document.querySelector('.buttons').style.display = 'none'; // Cacher les boutons "Oui" et "Non"
     });
