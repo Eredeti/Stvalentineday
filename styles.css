@@ -15,9 +15,9 @@ img {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 0; /* Réinitialise la marge droite */
 }
 
 h1 {
     margin-left: 0; /* Réinitialise la marge gauche */
 }
-
