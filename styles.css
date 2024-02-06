@@ -18,6 +18,8 @@ img {
 }
 
 h1 {
-    margin-top: 20px; /* Ajoute de l'espace en haut du titre */
+    display: block; /* Force le titre à apparaître sur une nouvelle ligne */
     text-align: center; /* Centrer le texte horizontalement */
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du titre */
 }
+
