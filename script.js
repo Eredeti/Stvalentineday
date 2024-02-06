@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const responseDiv = document.getElementById('response');
     const firstGifContainer = document.getElementById('first-gif-container');
     const secondGif = document.getElementById('second-gif');
+    const title = document.querySelector('h1');
 
     // Cacher le deuxième GIF au chargement de la page
     secondGif.style.display = 'none';
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
         secondGif.style.display = 'block'; // Afficher le deuxième GIF
         secondGif.setAttribute('src', 'deuxième.gif'); // Afficher le deuxième GIF
-        document.querySelector('h1').style.display = 'none'; // Cacher la phrase "Veux-tu être mon valentin ?"
+        title.style.display = 'none'; // Cacher la phrase "Veux-tu être mon valentin ?"
         document.querySelector('.buttons').style.display = 'none'; // Cacher les boutons "Oui" et "Non"
     });
 
