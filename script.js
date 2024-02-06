@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
     const responseDiv = document.getElementById('response');
+    const secondGifContainer = document.getElementById('second-gif-container');
+    const secondGif = document.getElementById('second-gif');
 
     yesBtn.addEventListener('click', function() {
         responseDiv.textContent = 'Youpi!';
         responseDiv.style.fontSize = '24px';
         responseDiv.style.color = 'green';
-
-        const secondGif = document.getElementById('second-gif');
         secondGif.setAttribute('src', 'chemin/vers/ton/deuxieme/gif.gif');
     });
 
@@ -26,5 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
             responseDiv.style.fontSize = '16px';
         }
         noBtnClicks++;
+
+        // Afficher le bouton "Oui" si ce n'est pas déjà le cas
+        if (yesBtn.style.display === 'none') {
+            yesBtn.style.display = 'inline-block';
+        }
+
+        // Réinitialiser le deuxième GIF
+        secondGif.setAttribute('src', '');
     });
 });
