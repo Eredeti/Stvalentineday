@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         responseDiv.textContent = 'Youpi!';
         responseDiv.style.fontSize = '24px';
         responseDiv.style.color = 'green';
-        responseDiv.style.display = 'block'; // Afficher le message seulement si Oui est cliqué
-        // Changer le GIF ou afficher un nouveau GIF ici si nécessaire
+
+        const secondGif = document.getElementById('second-gif');
+        secondGif.setAttribute('src', 'chemin/vers/ton/deuxieme/gif.gif');
     });
 
     let noBtnClicks = 0;
