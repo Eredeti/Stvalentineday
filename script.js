@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
-    const responseDiv = document.getElementById('response');
     const firstGifContainer = document.getElementById('first-gif-container');
-    const secondGif = document.getElementById('second-gif');
+    const secondGif = document.getElementById('first-gif'); // Correction: Utiliser l'ID correct pour le premier GIF
     const title = document.querySelector('h1');
 
     // Cacher le deuxième GIF au chargement de la page
-    secondGif.style.display = 'none';
+    firstGifContainer.style.display = 'block'; // Correction: Afficher le conteneur du premier GIF
 
     yesBtn.addEventListener('click', function() {
         firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
-        currentGifSrc = 'deuxième.gif';
-        valentinText.textContent = "YOUPIIIIIIIIIII"; // Nouveau texte
+        secondGif.setAttribute('src', 'deuxième.gif'); // Correction: Utiliser setAttribute pour changer la source du GIF
+        title.textContent = "YOUPIIIIIIIIIII"; // Correction: Modifier le texte correctement
         document.querySelector('.buttons').style.display = 'none'; // Cacher les boutons "Oui" et "Non"
     });
 
@@ -24,13 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
             noBtn.textContent = 'Réfléchis bien';
         } else if (noBtnClicks % 3 == 2) {
             noBtn.textContent = 'Pardon ?';
-            responseDiv.style.fontSize = '16px';
         }
         noBtnClicks++;
 
-        yesBtn.style.fontSize = `${parseInt(yesBtn.style.fontSize || 16) + 30}px`;
-
-        // Réinitialiser le deuxième GIF
-        secondGif.setAttribute('src', '');
+        // Réinitialiser le premier GIF
+        secondGif.setAttribute('src', 'premier.gif'); // Correction: Réinitialiser le premier GIF
     });
 });
