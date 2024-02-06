@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     noBtn.addEventListener('click', function() {
         if (noBtnClicks % 3 == 0) {
             noBtn.textContent = 'Tu es sûr ?';
-        } if (noBtnClicks % 3=== 1) {
-            noBtn.textContent = 'Encore une fois !';
-         }if (noBtnClicks % 3 === 2) {
-            noBtn.textContent = 'Ok, ok...';
+        } if (noBtnClicks % 3 == 1) {
+            noBtn.textContent = 'Réfléchis bien';
+         }if (noBtnClicks % 3 == 2) {
+            noBtn.textContent = 'Pardon ?';
             responseDiv.style.fontSize = '16px';
         }
         noBtnClicks++;
