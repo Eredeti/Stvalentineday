@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const responseDiv = document.getElementById('response');
     const secondGifContainer = document.getElementById('second-gif-container');
     const secondGif = document.getElementById('second-gif');
+    const oui = 0;
 
+    
     yesBtn.addEventListener('click', function() {
         responseDiv.textContent = 'Youpi!';
         responseDiv.style.fontSize = '24px';
