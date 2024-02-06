@@ -1,32 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const yesBtn = document.getElementById('yes-btn');
-    const noBtn = document.getElementById('no-btn');
-    const firstGifContainer = document.getElementById('first-gif-container');
-    const secondGif = document.getElementById('first-gif'); // Correction: Utiliser l'ID correct pour le premier GIF
-    const title = document.querySelector('h1');
+let changement=0;
+let compteur =0;
 
-    // Cacher le deuxième GIF au chargement de la page
-    firstGifContainer.style.display = 'block'; // Correction: Afficher le conteneur du premier GIF
+const titre = document.getElementById('titre');
+const gif = document.getElementById('gif');
+const bouton1 = document.getElementById('bouton1');
+const bouton2 = document.getElementById('bouton2');
 
-    yesBtn.addEventListener('click', function() {
-        firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
-        secondGif.setAttribute('src', 'deuxième.gif'); // Correction: Utiliser setAttribute pour changer la source du GIF
-        title.textContent = "YOUPIIIIIIIIIII"; // Correction: Modifier le texte correctement
-        document.querySelector('.buttons').style.display = 'none'; // Cacher les boutons "Oui" et "Non"
-    });
+titre.innerHTML = "Veux-tu être mon date le 14 février ?";
+gif.src = "premier.gif";
 
-    let noBtnClicks = 0;
-    noBtn.addEventListener('click', function() {
-        if (noBtnClicks % 3 == 0) {
-            noBtn.textContent = 'Tu es sûr ?';
-        } else if (noBtnClicks % 3 == 1) {
-            noBtn.textContent = 'Réfléchis bien';
-        } else if (noBtnClicks % 3 == 2) {
-            noBtn.textContent = 'Pardon ?';
-        }
-        noBtnClicks++;
+if changement == 1{
+    titre.innerHTML = "YOUPIIIIII !";
+    gif.src = "deuxième.gif";
+    bouton1.style.display = "none";
+    bouton2.style.display = "none";
+}
 
-        // Réinitialiser le premier GIF
-        secondGif.setAttribute('src', 'premier.gif'); // Correction: Réinitialiser le premier GIF
-    });
+bouton1.addEventListener('click', function() {
+    changement=1;
+});
+
+bouton2.addEventListener('click', function() {
+    compteur = compteur + 1;
+    if (compteur % 3 === 0) bouton2.textContent = "Tu es sûr";
+    if (compteur % 3 === 1) bouton2.textContent = "Réfléchis bien";
+    if (compteur % 3 === 2) bouton2.textContent = "Réfléchis mieux !";
 });
