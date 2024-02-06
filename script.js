@@ -10,13 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     secondGif.style.display = 'none';
 
     yesBtn.addEventListener('click', function() {
-        responseDiv.textContent = 'Youpi!';
-        responseDiv.style.fontSize = '24px';
-        responseDiv.style.color = 'green';
         firstGifContainer.style.display = 'none'; // Cacher le conteneur du premier GIF
         secondGif.style.display = 'block'; // Afficher le deuxième GIF
         secondGif.setAttribute('src', 'deuxième.gif'); // Afficher le deuxième GIF
-        title.style.display = 'none'; // Cacher la phrase "Veux-tu être mon valentin ?"
+        valentinText.textContent = "YOUPIIIIIIIIIII"; // Nouveau texte
         document.querySelector('.buttons').style.display = 'none'; // Cacher les boutons "Oui" et "Non"
     });
 
